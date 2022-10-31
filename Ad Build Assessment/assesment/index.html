@@ -1,96 +1,10 @@
 <!doctype html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Let it snow!</title>
 </head>
 <body>
-    <style>
-        .ad-970x250 {
-            border: 1px solid #000000;
-            display: block;
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-            width: 970px;
-        }
-        .landscape {
-            display: block;
-            background: #d9e4ed;
-            height: 250px;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 970px;
-            z-index: 0;
-        }
-        .background-mountain {
-            bottom: 0;
-            display: block;
-            height: 240px;
-            left: 0;
-            margin: 0 auto;
-            opacity: 1;
-            position: absolute;
-            white-space: nowrap;
-            z-index: 1;
-        }
-        .background-mountain img {
-            height: 100%;
-        }
-        .background-hills {
-            bottom: 0;
-            display: block;
-            height: 200px;
-            left: 0;
-            margin: 0 auto;
-            opacity: 1;
-            position: absolute;
-            white-space: nowrap;
-            z-index: 1;
-        }
-        .background-hills img {
-            height: 100%;
-        }
-        .background-city {
-            bottom: 0;
-            display: block;
-            height: 225px;
-            left: 0;
-            margin: 0 auto;
-            opacity: 1;
-            position: absolute;
-            white-space: nowrap;
-            z-index: 1;
-        }
-        .background-city img {
-            height: 100%;
-        }
-        .parallax .background-mountain {
-            animation: parallax 600s linear infinite;
-        }
-        .parallax .background-hills {
-            animation: parallax 400s linear infinite;
-        }
-        .parallax .background-city {
-            animation: parallax 300s linear infinite;
-        }
-        @keyframes parallax {
-            from {
-                left: 0;
-            }
-            to {
-                left: -970px;
-            }
-        }
-        .snowflake {
-            display: block;
-            height: 30px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 10;
-        }
-    </style>
     <section class="ad-970x250">
         <div class="landscape parallax">
             <div class="background-mountain">
@@ -120,5 +34,4 @@
      */
     </script>
 </body>
-
 </html>

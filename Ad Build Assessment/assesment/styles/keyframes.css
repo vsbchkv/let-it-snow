@@ -1,0 +1,8 @@
+@keyframes parallax {
+    from {
+      left: 0;
+    }
+    to {
+      left: -970px;
+    }
+  }

@@ -1,0 +1,11 @@
+.parallax .background-mountain {
+  animation: parallax 600s linear infinite;
+}
+
+.parallax .background-hills {
+  animation: parallax 400s linear infinite;
+}
+
+.parallax .background-city {
+  animation: parallax 300s linear infinite;
+}

@@ -1,0 +1,8 @@
+.ad-970x250 {
+  border: 1px solid #000000;
+  display: block;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  width: 970px;
+}

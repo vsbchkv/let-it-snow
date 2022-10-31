@@ -1,0 +1,10 @@
+.landscape {
+  display: block;
+  background: #d9e4ed;
+  height: 250px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 970px;
+  z-index: 0;
+}
