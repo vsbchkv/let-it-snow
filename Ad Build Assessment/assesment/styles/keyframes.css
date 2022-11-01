@@ -1,8 +1,26 @@
-@keyframes parallax {
-    from {
-      left: 0;
-    }
-    to {
-      left: -970px;
-    }
+/* @keyframes parallax {
+  from {
+    left: 0;
   }
+  to {
+    left: -970px;
+  }
+} */
+
+@keyframes parallax {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes dur {
+  from {
+    --base-dur: 100;
+  }
+  to {
+    --base-dur: 200;
+  }
+}
