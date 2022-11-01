@@ -1,37 +1,81 @@
-<!doctype html>
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./styles/styles.css">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Let it snow!</title>
-</head>
-<body>
-    <section class="ad-970x250">
+  </head>
+  <body>
+    <div class="promo-box">
+      <section class="promo-970x250">
         <div class="landscape parallax">
-            <div class="background-mountain">
-                <img src="images/mountain.png" />
-                <img src="images/mountain.png" />
-            </div>
-            <div class="background-hills">
-                <img src="images/hills.png" />
-                <img src="images/hills.png" />
-            </div>
-            <div class="background-city">
-                <img src="images/city.png" />
-                <img src="images/city.png" />
-            </div>
+          <a
+            href="https://www.denver.org/"
+            target="_blank"
+            rel="”noopener"
+            noreferrer”
+            class="logo"
+          >
+            <img src="./images/logo.svg" alt="denver.org logo" />
+          </a>
+          <div class="parallax-item parallax-item--mountain">
+            <picture class="parallax-pic">
+              <source srcset="images/mountain.avif" type="image/avif" />
+              <source srcset="images/mountain.png" type="image/png" />
+              <img class="parallax-img" src="images/mountain.png" alt="" />
+            </picture>
+          </div>
+          <div class="parallax-item parallax-item--hills">
+            <picture class="parallax-pic">
+              <source srcset="images/hills.avif" type="image/avif" />
+              <source srcset="images/hills.png" type="image/png" />
+              <img class="parallax-img" src="images/hills.png" alt="" />
+            </picture>
+          </div>
+          <div class="parallax-item parallax-item--sity">
+            <picture class="parallax-pic">
+              <source srcset="images/city.avif" type="image/avif" />
+              <source srcset="images/city.png" type="image/png" />
+              <img class="parallax-img" src="images/city.png" alt="" />
+            </picture>
+          </div>
+          <div class="info">
+            <time class="info-time"></time>
+            <span class="info-temp"></span>
+          </div>
         </div>
-        <div class="snow">
-            <img class="snowflake" src="images/snowflake.svg" />
-        </div>
-    </section>
+        <!-- <div class="snow">
+                <img class="snowflake" src="images/snowflake.svg" />
+                
+            </div> -->
+      </section>
+    </div>
     <script type="text/javascript">
-    /**
-     * Play button should start the following
-     *   • Overlay should fade out
-     *   • Parallax should start animating
-     *   • Snow should fall
-     *   • Time should display in lower right corner (update on the minute)
-     */
+      /**
+       * Play button should start the following
+       *   • Overlay should fade out
+       *   • Parallax should start animating
+       *   • Snow should fall
+       *   • Time should display in lower right corner (update on the minute)
+       */
     </script>
-</body>
+    <script type="text/javascript" src="./scripts/parallax.js"></script>
+    <script
+      type="module"
+      type="text/javascript"
+      src="./scripts/getTemperature.js"
+    ></script>
+    <script
+      type="module"
+      type="text/javascript"
+      src="./scripts/getTime.js"
+    ></script>
+  </body>
 </html>

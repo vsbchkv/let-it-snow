@@ -1,11 +1,47 @@
-.parallax .background-mountain {
-  animation: parallax 600s linear infinite;
+.parallax {
+    display: grid;
+    grid-template-areas: "slides";
+    --base-duration: 40s;
+
+}
+.parallax-item {
+    position: relative;
+    grid-area: slides;
+    display: flex;
+    height: 100%;
 }
 
-.parallax .background-hills {
-  animation: parallax 400s linear infinite;
+.parallax-item--mountain {
+    z-index: 1;
+    --flex-basis: 65%;
+    --duration: calc(var(--base-duration) * 3);
 }
 
-.parallax .background-city {
-  animation: parallax 300s linear infinite;
+.parallax-item--hills {
+    z-index: 2;
+    --flex-basis: 70%;
+    --duration: calc(var(--base-duration) * 1.5);
+}
+
+.parallax-item--sity {
+    z-index: 3;
+    --flex-basis: 77.85%;
+    --duration: var(--base-duration);
+}
+
+.parallax-pic {
+    flex-basis: var(--flex-basis);
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: grid;
+    align-items: end;
+    animation: parallax var(--duration, 0) linear infinite;
+}
+
+.parallax-img {
+    width: 100%;
+}
+
+.parallax-pic:not(:first-child) .parallax-img {
+    transform: translateX(-1px); /*Fix 1px gap between slides in chrome*/
 }
