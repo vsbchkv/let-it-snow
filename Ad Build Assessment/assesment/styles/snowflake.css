@@ -1,8 +1,17 @@
 .snowflake {
   display: block;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 10;
+  width: var(--snowflake-size, 30px);
+  height: var(--snowflake-size, 30px);
+  position: absolute;
+  top: calc(var(--snowflake-size, -30px) * -1);
+  /* left: var(--snowflake-position, 0); */
+  animation: snowtime var(--speed, 8s) linear var(--delay, 0);
+  border-radius: 50%;
+  background-color: hsla(var(--hue, 50), 100%, 90%, .15);
+  /* transform: translateY(calc(var(--snowflake-size, -30px) * -1)); */
+}
+
+.snowflake path {
+  fill: hsl(var(--hue, 50), 100%, var(--lightness, 75%));
 }

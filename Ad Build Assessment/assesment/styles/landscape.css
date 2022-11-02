@@ -1,12 +1,64 @@
 .landscape {
-  /* position: relative; */
+  position: relative;
   display: grid;
-  align-items: end;
-  background-color: #d9e4ed;
+  place-items: center;
+  z-index: 8;
+  grid-area: content;
   height: 100%;
-  /* left: 0; */
-  /* position: absolute; */
-  /* top: 0;
-  width: 970px; */
-  z-index: 1;
+}
+
+.landscape::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.landscape-btn {
+  z-index: 9;
+  position: relative;
+  padding: 0;
+  background: none no-repeat;
+  appearance: none;
+  border: 0;
+  width: 12.7%;
+  aspect-ratio: 1/1;
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.landscape-btn:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.landscape-btn:hover,
+.landscape-btn:not(:hover) {
+  transition: opacity 0.5s;
+}
+
+.landscape-btn svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+.landscape--fade::after,
+.landscape--fade > .landscape-btn {
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.landscape--snow {
+  z-index: 5;
+  transition: background-color 1s;
+  place-items: start;
+}
+
+.landscape--snow::after {
+  display: none;
 }

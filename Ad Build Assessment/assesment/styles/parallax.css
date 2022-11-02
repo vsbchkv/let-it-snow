@@ -1,47 +1,55 @@
 .parallax {
-    display: grid;
-    grid-template-areas: "slides";
-    --base-duration: 40s;
-
+  display: grid;
+  grid-template-areas: "slides";
+  height: 100%;
+  grid-area: content;
+  background-color: #d9e4ed;
 }
+
+.parallax--active {
+  --play-state: running;
+  --base-duration: 40s;
+}
+
 .parallax-item {
-    position: relative;
-    grid-area: slides;
-    display: flex;
-    height: 100%;
+  position: relative;
+  grid-area: slides;
+  display: flex;
+  height: 100%;
 }
 
 .parallax-item--mountain {
-    z-index: 1;
-    --flex-basis: 65%;
-    --duration: calc(var(--base-duration) * 3);
+  z-index: 1;
+  --flex-basis: 65%;
+  --duration: calc(var(--base-duration) * 3);
 }
 
 .parallax-item--hills {
-    z-index: 2;
-    --flex-basis: 70%;
-    --duration: calc(var(--base-duration) * 1.5);
+  z-index: 2;
+  --flex-basis: 70%;
+  --duration: calc(var(--base-duration) * 1.5);
 }
 
 .parallax-item--sity {
-    z-index: 3;
-    --flex-basis: 77.85%;
-    --duration: var(--base-duration);
+  z-index: 3;
+  --flex-basis: 77.85%;
+  --duration: var(--base-duration);
 }
 
 .parallax-pic {
-    flex-basis: var(--flex-basis);
-    flex-grow: 0;
-    flex-shrink: 0;
-    display: grid;
-    align-items: end;
-    animation: parallax var(--duration, 0) linear infinite;
+  flex-basis: var(--flex-basis);
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: grid;
+  align-items: end;
+  animation: parallax var(--duration, 0) linear infinite;
+  animation-play-state: var(--play-state, paused);
 }
 
 .parallax-img {
-    width: 100%;
+  width: 100%;
 }
 
 .parallax-pic:not(:first-child) .parallax-img {
-    transform: translateX(-1px); /*Fix 1px gap between slides in chrome*/
+  transform: translateX(-1px); /*Fix 1px gap between slides in chrome*/
 }

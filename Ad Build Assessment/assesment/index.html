@@ -15,7 +15,16 @@
   <body>
     <div class="promo-box">
       <section class="promo-970x250">
-        <div class="landscape parallax">
+        <div class="landscape">
+          <button type="button" class="landscape-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="parallax">
           <a
             href="https://www.denver.org/"
             target="_blank"
@@ -51,10 +60,6 @@
             <span class="info-temp"></span>
           </div>
         </div>
-        <!-- <div class="snow">
-                <img class="snowflake" src="images/snowflake.svg" />
-                
-            </div> -->
       </section>
     </div>
     <script type="text/javascript">
@@ -65,8 +70,12 @@
        *   • Snow should fall
        *   • Time should display in lower right corner (update on the minute)
        */
-    </script>
-    <script type="text/javascript" src="./scripts/parallax.js"></script>
+    // </script>
+    <script
+      type="module"
+      type="text/javascript"
+      src="./scripts/parallax.js"
+    ></script>
     <script
       type="module"
       type="text/javascript"
@@ -76,6 +85,11 @@
       type="module"
       type="text/javascript"
       src="./scripts/getTime.js"
+    ></script>
+    <script
+      type="module"
+      type="text/javascript"
+      src="./scripts/playAnimations.js"
     ></script>
   </body>
 </html>

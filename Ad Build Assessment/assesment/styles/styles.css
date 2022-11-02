@@ -5,3 +5,13 @@
 @import "snowflake.css";
 @import "parallax.css";
 @import "keyframes.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
